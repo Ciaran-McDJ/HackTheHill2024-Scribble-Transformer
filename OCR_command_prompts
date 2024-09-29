@@ -1,0 +1,11 @@
+STEP 1: Initializing language model
+java -Done-jar.main.class=edu.berkeley.cs.nlp.ocular.main.InitializeLanguageModel -mx7g -jar ocular-0.3-SNAPSHOT-with_dependencies.jar -inputTextPath "english->alphanumerical_only.txt" -outputLmPath lm/english_letters_numbers.lmser 
+
+STEP 2: Initializing font
+java -Done-jar.main.class=edu.berkeley.cs.nlp.ocular.main.InitializeFont -mx7g -jar ocular-0.3-SNAPSHOT-with_dependencies.jar -inputLmPath lm/english_letters_numbers.lmser -outputFontPath font/english_letters_numbers-init.fontser
+
+STEP 3: Train a font
+java -Done-jar.main.class=edu.berkeley.cs.nlp.ocular.main.TrainFont -mx7g -jar ocular-0.3-SNAPSHOT-with_dependencies.jar -inputFontPath font/english_letters_numbers-init.fontser -inputLmPath lm/english_letters_numbers.lmser -inputDocPath Communist_training_data -outputFontPath font/advertencias/trained_letters_numbers.fontser -outputPath Communist -allowGlyphSubstitution true -updateGsm true -outputGsmPath gsm/advertencias/trained.gsmser
+
+STEP 4: Transcribe
+java -Done-jar.main.class=edu.berkeley.cs.nlp.ocular.main.Transcribe -mx7g -jar ocular-0.3-SNAPSHOT-with_dependencies.jar -inputDocPath sample_scrawl -inputFontPath Communist\font\retrained_iter-3_batch-1.fontser -inputLmPath lm/english_letters_numbers.lmser -outputPath Scrawl_text -extractedLinesPath scrawl_lines -uniformLineHeight false -allowGlyphSubstitution true

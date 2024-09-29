@@ -10,22 +10,9 @@ NOTE: This is an unfinished project! We spent the hackathon learning a ton about
 Contents of Project: This project involved three components, the first two involve using AI models that someone else made and understanding what they did to use it for our project:
 
 Image_Transformer - UNFINISHED. Takes input of messy writting and what it should be transformed towards, then makes messy writting closer towards what it should be. Used open source Stable Diffusion program as a template for AI image generation, we reverse engineered how diffusion process works to improve images and got the relevant code we needed, we now just need to figure out the inputs and modify it a bit to work with the other components.
+Dependence: torch (https://pytorch.org/get-started/locally/)
 
 Identifier - FINISHED. Takes input of messy writting and identifies what text it says. Used untrained Ocular AI model, trained the model ourselves.
+Dependences: 
 
 Spell_Check - NOT STARTED. Takes input of text, fixes typos and grammar. This should be easy with a python library, just focused on other aspects of the project.
-
-
-
-
-
-
-
-
-
-
-
-
-Dependances:
-torch - https://pytorch.org/get-started/locally/
-Other things probably, we didn't get that far

@@ -1,18 +1,18 @@
-#Reverse Engineering Stable Diffusion from https://github.com/CompVis/latent-diffusion/blob/main/ldm/models/diffusion/ddpm.py
-
+# Reverse Engineering Stable Diffusion from https://github.com/CompVis/latent-diffusion/blob/main/ldm/models/diffusion/ddpm.py
+# Taking functions that are relevant to what we want to do, then will figure out what inputs to give it and modify it a bit (didn't finish this)
 
 print('starting to run code')
 
 import sys
-sys.path.append('/home/ciaran-mcdj/.local/share/pipx/venvs')
-import torch
+# sys.path.append('/home/ciaran-mcdj/.local/share/pipx/venvs') #NOTE: did not have package in correct place so needed to add to PATH to import
+import torch 
 
 
 
 
 
-a = torch.randn(2)
-print(a)
+# a = torch.randn(2)
+# print(a)
 
 #
 @torch.no_grad()
